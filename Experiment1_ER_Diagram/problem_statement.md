@@ -23,7 +23,8 @@ FlexiFit Gym wants a database to manage its members, trainers, and fitness progr
 
 ### ER Diagram:
 *Paste or attach your diagram here*  
-![ER Diagram](er_diagram_fitness.png)
+![ER Diagram] <img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/3349c582-8ebf-4338-9217-2f3b394be14f" />
+
 
 ### Entities and Attributes
 
@@ -65,7 +66,8 @@ The Central Library wants to manage book lending and cultural events.
 
 ### ER Diagram:
 *Paste or attach your diagram here*  
-![ER Diagram](er_diagram_library.png)
+![ER Diagram] <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/ae9bfdc7-14c1-4e3b-b17d-df4b2ec45c80" />
+
 
 ### Entities and Attributes
 
@@ -107,7 +109,8 @@ A popular restaurant wants to manage reservations, orders, and billing.
 
 ### ER Diagram:
 *Paste or attach your diagram here*  
-![ER Diagram](er_diagram_restaurant.png)
+![ER Diagram]<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/ffc5be69-7a36-4f34-ab34-cab8f399af8c" />
+
 
 ### Entities and Attributes
 
