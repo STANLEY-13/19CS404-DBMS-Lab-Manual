@@ -104,124 +104,148 @@ CREATE TABLE Table_Name (
 ```
 
 **Question 1**
---
--- Paste Question 1 here
+Create a table named Orders with the following constraints: OrderID as INTEGER should be the primary key. OrderDate as DATE should be not NULL. CustomerID as INTEGER should be a foreign key referencing Customers(CustomerID).
 
 ```sql
--- Paste your SQL code below for Question 1
+CREATE TABLE Orders(
+OrderID INTEGER PRIMARY KEY,
+OrderDate DATE NOT NULL,
+CustomerID INTEGER,
+FOREIGN KEY(CustomerID) REFERENCES Customers(CustomerID));
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/f7648bd8-4a55-4459-adc4-918a1f925fd8)
 
-![Output1](output.png)
 
 **Question 2**
----
--- Paste Question 2 here
+Create a table named Department with the following constraints: DepartmentID as INTEGER should be the primary key. DepartmentName as TEXT should be unique and not NULL. Location as TEXT.
 
 ```sql
--- Paste your SQL code below for Question 2
+CREATE TABLE Department(
+DepartmentID INTEGER PRIMARY KEY,
+DepartmentName TEXT NOT NULL UNIQUE,
+Location TEXT);
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/582e197d-a112-43d0-be3f-7f565532bc46)
 
-![Output2](output.png)
 
 **Question 3**
----
--- Paste Question 3 here
+Create a table named Locations with the following columns: LocationID as INTEGER LocationName as TEXT Address as TEXT
 
 ```sql
--- Paste your SQL code below for Question 3
+CREATE TABLE Locations(
+LocationID INTEGER,
+LocationName TEXT,
+Address TEXT);
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/d29e9767-b0c3-4e0a-9806-f9bdcedd32c8)
 
-![Output3](output.png)
 
 **Question 4**
----
--- Paste Question 4 here
+ In the Products table, insert a record where some fields are NULL, another record where all fields are filled without any NULL values, and a third record where some fields are filled, and others are left as NULL.
 
 ```sql
--- Paste your SQL code below for Question 4
+INSERT INTO Products('ProductID','Name','Category')
+VALUES(106,'Fitness Tracker','Wearables');
+
+INSERT INTO Products('ProductID','Name','Category','Price','Stock')
+VALUES(107,'Laptop','Electronic',999.99,50);
+
+INSERT INTO Products('ProductID','Name','Category','Stock')
+VALUES(108,'Wireless Earbud','Accessorie',100);
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/a91f2b82-a71b-44d1-b4ce-1f583c2f2309)
 
-![Output4](output.png)
 
 **Question 5**
----
--- Paste Question 5 here
+Write an SQL command can to add a column named email of type TEXT to the customers table
 
 ```sql
--- Paste your SQL code below for Question 5
+ALTER TABLE customers ADD COLUMN
+email TEXT;
 ```
 
 **Output:**
-
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/0afb4589-571c-4860-9cc5-a83151263b3c)
 
 **Question 6**
----
--- Paste Question 6 here
+ Create a table named ProjectAssignments with the following constraints: AssignmentID as INTEGER should be the primary key. EmployeeID as INTEGER should be a foreign key referencing Employees(EmployeeID). ProjectID as INTEGER should be a foreign key referencing Projects(ProjectID). AssignmentDate as DATE should be NOT NULL.
 
 ```sql
--- Paste your SQL code below for Question 6
+CREATE TABLE ProjectAssignments(
+AssignmentID INTEGER PRIMARY KEY,
+EmployeeID INTEGER,
+ProjectID INTEGER,
+AssignmentDate DATE NOT NULL,
+FOREIGN KEY(EmployeeID) REFERENCES Employees(EmployeeID),
+FOREIGN KEY(ProjectID) REFERENCES Projects(ProjectID));
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/93d00901-424c-4fc8-acb8-73498b6edd1e)
 
-![Output6](output.png)
 
 **Question 7**
----
--- Paste Question 7 here
+Insert all books from Out_of_print_books into Books Table attributes are ISBN, Title, Author, Publisher, YearPublished
 
 ```sql
--- Paste your SQL code below for Question 7
+INSERT INTO Books(ISBN,Title,Author,Publisher,YearPublished)
+SELECT ISBN, Title, Author, Publisher, YearPublished
+FROM Out_of_print_books;
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/e0491f4f-024e-4c2b-9903-9cfe30169c6d)
 
-![Output7](output.png)
 
 **Question 8**
----
--- Paste Question 8 here
+Create a new table named contacts with the following specifications: contact_id as INTEGER and primary key. first_name as TEXT and not NULL. last_name as TEXT and not NULL. email as TEXT. phone as TEXT and not NULL with a check constraint to ensure the length of phone is at least 10 characters.
 
 ```sql
--- Paste your SQL code below for Question 8
+CREATE TABLE contacts(
+contact_id INTEGER PRIMARY KEY,
+first_name TEXT NOT NULL,
+last_name TEXT NOT NULL,
+email TEXT,
+phone TEXT NOT NULL CHECK(LENGTH(phone)>9));
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/d2e12931-bf33-4324-bc2a-493b3132d066)
 
-![Output8](output.png)
 
 **Question 9**
----
--- Paste Question 9 here
+ Insert a record with EmployeeID 001, Name Sarah Parker, Position Manager, Department HR, and Salary 60000 into the Employee table.
 
 ```sql
--- Paste your SQL code below for Question 9
+INSERT INTO Employee(EmployeeID,Name,Position,Department,Salary)
+VALUES(001,'Sarah Parker','Manager','HR','60000');
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/f5f7c54a-ba3a-4cbf-9133-57583cd8e49c)
 
-![Output9](output.png)
 
 **Question 10**
----
--- Paste Question 10 here
+Write a SQL query to Rename the "city" column to "location" in the "customer" table.
+
+Sample table: customer
+
+customer_id | cust_name | city | grade | salesman_id -------------+----------------+------------+-------+------------- 3002 | Nick Rimando | New York | 100 | 5001 3007 | Brad Davis | New York | 200 | 5001 3005 | Graham Zusi | California | 200 | 5002
 
 ```sql
--- Paste your SQL code below for Question 10
+ALTER TABLE customer RENAME COLUMN city TO location;
 ```
 
 **Output:**
-
-![Output10](output.png)
+![image](https://github.com/user-attachments/assets/1ab5d1d2-c11b-460d-a254-74e15d6fe9b1)
 
 
 ## RESULT
